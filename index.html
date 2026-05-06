@@ -99,6 +99,83 @@
   </div>
   <div class="overlay" id="overlay"></div>
 
+    <!-- ===== PPTX UPLOAD PANEL (góc trái) ===== -->
+  <div class="upload-panel pptx-panel" id="pptxPanel">
+    <div class="panel-header">
+      <h2 class="panel-title pptx-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" style="color:#c05621">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8M12 17v4"/>
+          <rect x="6" y="7" width="5" height="6" rx="1"/>
+          <line x1="13" y1="8" x2="17" y2="8"/>
+          <line x1="13" y1="11" x2="16" y2="11"/>
+        </svg>
+        Đăng PowerPoint
+      </h2>
+      <button class="panel-close" id="closePptx" aria-label="Đóng">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drop-zone pptx-drop" id="pptxDropZone">
+      <div class="drop-icon" style="color:#c05621">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="6" y="4" width="36" height="40" rx="3"/>
+          <rect x="12" y="14" width="14" height="16" rx="2"/>
+          <line x1="28" y1="16" x2="36" y2="16"/>
+          <line x1="28" y1="21" x2="34" y2="21"/>
+          <line x1="12" y1="36" x2="36" y2="36"/>
+        </svg>
+      </div>
+      <p class="drop-text">Kéo thả file PowerPoint vào đây</p>
+      <span class="drop-or">hoặc</span>
+      <label class="btn-browse pptx-browse" for="pptxInput">Chọn tệp</label>
+      <input type="file" id="pptxInput" accept=".ppt,.pptx,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" hidden/>
+      <p class="drop-hint">PPT, PPTX · Tối đa 100MB</p>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Tiêu đề bài trình chiếu</label>
+      <input type="text" class="form-input" id="pptxTitle" placeholder="Nhập tiêu đề…"/>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Môn học</label>
+      <select class="form-input form-select" id="pptxSubject">
+        <option value="">-- Chọn môn học --</option>
+        <option>Toán học</option>
+        <option>Ngữ văn</option>
+        <option>Khoa học</option>
+        <option>Lịch sử</option>
+        <option>Địa lý</option>
+        <option>Tiếng Anh</option>
+        <option>Vật lý</option>
+        <option>Hoá học</option>
+        <option>Sinh học</option>
+        <option>Khác</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Mô tả</label>
+      <textarea class="form-textarea" id="pptxDesc" placeholder="Mô tả ngắn về nội dung bài trình chiếu…" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Người đăng</label>
+      <input type="text" class="form-input" id="pptxAuthor" placeholder="Tên giáo viên / học sinh…"/>
+    </div>
+
+    <button class="btn-submit btn-submit-pptx" id="submitPptx">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18">
+        <path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/>
+      </svg>
+      Đăng PowerPoint
+    </button>
+  </div>
   <!-- ===== MAIN ===== -->
   <main class="main-content">
 
