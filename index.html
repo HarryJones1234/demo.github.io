@@ -34,17 +34,32 @@
         <a href="#" class="nav-link">Liên hệ</a>
       </nav>
 
-      <!-- Upload Button -->
-      <button class="btn-upload" id="openUpload">
-        <span class="btn-upload-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="17 8 12 3 7 8"/>
-            <line x1="12" y1="3" x2="12" y2="15"/>
-          </svg>
-        </span>
-        Đăng video
-      </button>
+      <!-- Upload Buttons -->
+      <div class="header-actions">
+        <button class="btn-upload" id="openUpload">
+          <span class="btn-upload-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+          </span>
+          Đăng video
+        </button>
+
+        <button class="btn-upload btn-pptx" id="openPptx">
+          <span class="btn-upload-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+              <rect x="6" y="7" width="5" height="6" rx="1"/>
+              <line x1="13" y1="8" x2="17" y2="8"/>
+              <line x1="13" y1="11" x2="16" y2="11"/>
+            </svg>
+          </span>
+          Đăng PowerPoint
+        </button>
+      </div>
     </div>
   </header>
 
@@ -99,7 +114,7 @@
   </div>
   <div class="overlay" id="overlay"></div>
 
-    <!-- ===== PPTX UPLOAD PANEL (góc trái) ===== -->
+  <!-- ===== PPTX UPLOAD PANEL (góc trái) ===== -->
   <div class="upload-panel pptx-panel" id="pptxPanel">
     <div class="panel-header">
       <h2 class="panel-title pptx-title">
@@ -176,6 +191,7 @@
       Đăng PowerPoint
     </button>
   </div>
+
   <!-- ===== MAIN ===== -->
   <main class="main-content">
 
@@ -213,6 +229,8 @@
           <div class="card-thumb" style="background:linear-gradient(135deg,#0f4c81,#1a8fe3)">
             <span class="card-play">▶</span>
             <span class="card-duration">12:45</span>
+            <video class="card-video" controls>
+              <source src="" type="video/mp4"/>
             </video>
           </div>
           <div class="card-body">
@@ -320,6 +338,107 @@
         </div>
 
       </div><!-- /video-grid -->
+    </section>
+
+    <!-- PowerPoint Feed -->
+    <section class="feed-section pptx-section">
+      <div class="feed-header">
+        <h3 class="feed-title">
+          <span class="pptx-title-icon">📊</span> Bài trình chiếu
+        </h3>
+      </div>
+
+      <div class="pptx-grid" id="pptxGrid">
+
+        <!-- Demo PPTX cards -->
+        <div class="pptx-card">
+          <div class="pptx-thumb" style="background:linear-gradient(135deg,#c05621,#ed8936)">
+            <div class="pptx-preview-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6" width="52" height="52">
+                <rect x="6" y="4" width="36" height="40" rx="3"/>
+                <rect x="12" y="14" width="14" height="16" rx="2"/>
+                <line x1="28" y1="16" x2="36" y2="16"/>
+                <line x1="28" y1="21" x2="34" y2="21"/>
+                <line x1="12" y1="36" x2="36" y2="36"/>
+              </svg>
+            </div>
+            <span class="pptx-slides-badge">18 slides</span>
+          </div>
+          <div class="pptx-body">
+            <span class="pptx-category-tag">Toán học</span>
+            <h4 class="pptx-card-title">Hình học không gian – Chương 3</h4>
+            <div class="pptx-meta">
+              <span class="card-author">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="13"><path d="M10 10a4 4 0 100-8 4 4 0 000 8zm-7 8a7 7 0 1114 0H3z"/></svg>
+                Cô Nguyễn Lan
+              </span>
+              <a class="pptx-download" href="#" download>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="14"><path d="M13 8V2H7v6H3l7 7 7-7h-4zm-7 8v2h8v-2H6z"/></svg>
+                Tải xuống
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pptx-card">
+          <div class="pptx-thumb" style="background:linear-gradient(135deg,#2c5282,#4299e1)">
+            <div class="pptx-preview-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6" width="52" height="52">
+                <rect x="6" y="4" width="36" height="40" rx="3"/>
+                <rect x="12" y="14" width="14" height="16" rx="2"/>
+                <line x1="28" y1="16" x2="36" y2="16"/>
+                <line x1="28" y1="21" x2="34" y2="21"/>
+                <line x1="12" y1="36" x2="36" y2="36"/>
+              </svg>
+            </div>
+            <span class="pptx-slides-badge">24 slides</span>
+          </div>
+          <div class="pptx-body">
+            <span class="pptx-category-tag">Lịch sử</span>
+            <h4 class="pptx-card-title">Cách mạng tháng Tám 1945</h4>
+            <div class="pptx-meta">
+              <span class="card-author">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="13"><path d="M10 10a4 4 0 100-8 4 4 0 000 8zm-7 8a7 7 0 1114 0H3z"/></svg>
+                Cô Phạm Thủy
+              </span>
+              <a class="pptx-download" href="#" download>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="14"><path d="M13 8V2H7v6H3l7 7 7-7h-4zm-7 8v2h8v-2H6z"/></svg>
+                Tải xuống
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pptx-card">
+          <div class="pptx-thumb" style="background:linear-gradient(135deg,#276749,#48bb78)">
+            <div class="pptx-preview-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6" width="52" height="52">
+                <rect x="6" y="4" width="36" height="40" rx="3"/>
+                <rect x="12" y="14" width="14" height="16" rx="2"/>
+                <line x1="28" y1="16" x2="36" y2="16"/>
+                <line x1="28" y1="21" x2="34" y2="21"/>
+                <line x1="12" y1="36" x2="36" y2="36"/>
+              </svg>
+            </div>
+            <span class="pptx-slides-badge">12 slides</span>
+          </div>
+          <div class="pptx-body">
+            <span class="pptx-category-tag">Sinh học</span>
+            <h4 class="pptx-card-title">Quang hợp và hô hấp tế bào</h4>
+            <div class="pptx-meta">
+              <span class="card-author">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="13"><path d="M10 10a4 4 0 100-8 4 4 0 000 8zm-7 8a7 7 0 1114 0H3z"/></svg>
+                Thầy Trần Hùng
+              </span>
+              <a class="pptx-download" href="#" download>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="14"><path d="M13 8V2H7v6H3l7 7 7-7h-4zm-7 8v2h8v-2H6z"/></svg>
+                Tải xuống
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /pptx-grid -->
     </section>
   </main>
 
